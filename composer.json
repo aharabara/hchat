@@ -1,0 +1,14 @@
+{
+  "autoload": {
+    "classmap": [
+      "src"
+    ]
+  },
+  "require": {
+    "ext-ncurses": "*",
+    "ext-mbstring": "*",
+    "ext-simplexml": "*",
+    "fab1en/rocket-chat-rest-client": "^1.0",
+    "ext-json": "*"
+  }
+}

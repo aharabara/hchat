@@ -1,0 +1,46 @@
+input#message {
+    width: 80%;
+    display: inline;
+    margin: 0 2px 0 0;
+}
+
+input#message:focus {
+    caret-color: cyan;
+    background: blue;
+    color: white;
+}
+
+button#send {
+    width: 20%;
+    display: inline;
+}
+
+button {
+    display: block;
+    background-color: black;
+    color: white;
+}
+
+button:focus {
+    background-color: white;
+    color: black;
+}
+
+.login-modal {
+    padding: 2px 2px 2px 2px;
+}
+
+label.error {
+    color: red;
+    visibility: hidden;
+}
+
+ol {
+    background: black;
+    color: white;
+}
+
+ol:focus {
+    background: white;
+    color: blue;
+}

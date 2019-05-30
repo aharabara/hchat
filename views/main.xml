@@ -1,0 +1,19 @@
+<template id="main">
+    <head>
+        <link src="/assets/styles.css"/>
+    </head>
+    <body>
+        <section title="Users" surface="column.left">
+            <ol id="users" on.item.selected="\App\UserController@login">
+                <li value="wtf?">User</li>
+            </ol>
+        </section>
+        <section title="History" surface="column.right.top">
+            <textarea id="info"/>
+        </section>
+        <section title="Message" surface="column.right.bottom">
+            <input id="message"/>
+            <button on.press="\App\UserController@login" id="send">Send</button>
+        </section>
+    </body>
+</template>

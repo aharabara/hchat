@@ -1,0 +1,16 @@
+<surfaces>
+    <surface id="column.left">
+        <pos/>
+        <pos x="35"/>
+    </surface>
+    <surface id="column.right.top">
+        <pos x="35"/>
+        <pos y="-4"/>
+    </surface>
+    <surface id="column.right.bottom">
+        <pos y="-3" x="35"/>
+        <pos/>
+    </surface>
+    <surface id="popup" height="10" type="centered"/>
+    <surface id="login" height="15" type="centered"/>
+</surfaces>

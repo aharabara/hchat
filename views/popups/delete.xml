@@ -1,0 +1,14 @@
+<template id="popup">
+    <head>
+        <link src="/assets/styles.css"/>
+    </head>
+    <body>
+        <section id="delete-popup" surface="popup">
+            <p>
+                Are you sure you want to delete it?
+            </p>
+            <button on.press="\App\TaskController@closePopUp">No</button>
+            <button on.press="\App\TaskController@deleteTask">Yes</button>
+        </section>
+    </body>
+</template>

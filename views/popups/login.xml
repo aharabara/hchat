@@ -1,0 +1,14 @@
+<template id="login">
+    <head>
+        <link src="/assets/styles.css"/>
+    </head>
+    <body>
+        <section class="login-modal" surface="login">
+            <label>Login</label>
+            <label class="error" id="login-error">Invalid credentials.</label>
+            <input id="login-username"/>
+            <password id="login-password"/>
+            <button on.press="\App\UserController@login">Login</button>
+        </section>
+    </body>
+</template>
