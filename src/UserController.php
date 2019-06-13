@@ -2,10 +2,10 @@
 
 namespace App;
 
-use App\Api\User;
+use App\Api\Api;
+use App\Api\Entities\DirectMessageChannel;
 use Base\Application;
 use Base\Components\Input;
-use Base\Components\OrderedList\ListItem;
 use Base\Components\OrderedList\OrderedList;
 use Base\Components\Password;
 use Base\Components\TextArea;
@@ -18,16 +18,16 @@ class UserController extends BaseController
     protected $userName;
     /** @var Password */
     protected $userPassword;
-    /** @var User */
-    protected $user;
-    /**
-     * @var TextArea
-     */
+    /** @var Api */
+    protected $api;
+    /** @var TextArea */
     protected $infoField;
-    /**
-     * @var OrderedList
-     */
+    /** @var OrderedList */
     protected $userList;
+    /** @var DirectMessageChannel */
+    protected $currentRoom;
+    /** @var Input */
+    protected $messageInput;
 
     /**
      * UserController constructor.
@@ -41,30 +41,43 @@ class UserController extends BaseController
         $this->userName = $app->findFirst('#login-username', 'login');
         $this->userPassword = $app->findFirst('#login-password', 'login');
         $this->infoField = $app->findFirst('#info', 'main');
+        $this->messageInput = $app->findFirst('#message', 'main');
     }
 
     public function login(): void
     {
         // login as user
-        $this->user = $user = new User($this->userName->getText(), $this->userPassword->getText());
-        if ($user->login()) {
-            $users = $user->list_users();
-            foreach ($users as $friend){
-                if(strpos($friend->username, 'itr') !== 0) continue;
-                $item  = new ListItem([
-                    'text' => $friend->username,
-                    'value' => $friend->_id,
-                ]);
-                $this->userList->addItems($item);
-                $user->test($friend->_id);
+        $this->api = new Api($this->userName->getText(), $this->userPassword->getText());
+        if ($this->api->login()) {
+            foreach ($this->api->directMessages() as $directMessageChannel) {
+                $this->userList->addItems($directMessageChannel->asListItem());
             }
-//            $this->infoField->setText(json_encode($users, JSON_PRETTY_PRINT));;
             $this->switchTo('main');
-            
+
         } else {
             throw new \UnexpectedValueException(var_export([
-                $user,
+                $this->api,
             ], true));
+        }
+    }
+
+    public function openPrivateChat(): void
+    {
+        /** @var DirectMessageChannel $dm */
+        $dm = $this->userList->getSelectedItem()->getValue();
+        $content = '';
+        foreach($dm->messages() as $message) {
+            $content .= "\n{$message->sender()->name()} :\n>>{$message->content()}\n";
+        }
+        $this->infoField->setText($content);
+        $this->currentRoom = $dm;
+    }
+    
+    
+    public function sendMessage(): void
+    {
+        if($this->currentRoom){
+            $this->currentRoom->send($this->messageInput->getText());
         }
     }
 }

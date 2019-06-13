@@ -10,15 +10,15 @@ input#message:focus {
     color: white;
 }
 
-button#send {
-    width: 20%;
-    display: inline;
-}
-
 button {
     display: block;
     background-color: black;
     color: white;
+}
+
+button#send {
+    width: 20%;
+    display: inline;
 }
 
 button:focus {

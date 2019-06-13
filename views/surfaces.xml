@@ -1,6 +1,10 @@
 <surfaces>
-    <surface id="column.left">
+    <surface id="column.left.top">
         <pos/>
+        <pos y="-4" x="35"/>
+    </surface>
+    <surface id="column.left.bottom">
+        <pos y="-4"/>
         <pos x="35"/>
     </surface>
     <surface id="column.right.top">
@@ -8,7 +12,7 @@
         <pos y="-4"/>
     </surface>
     <surface id="column.right.bottom">
-        <pos y="-3" x="35"/>
+        <pos y="-4" x="35"/>
         <pos/>
     </surface>
     <surface id="popup" height="10" type="centered"/>
