@@ -4,10 +4,11 @@ namespace App\Api;
 
 use Httpful\Request;
 
-class User extends \RocketChat\User
+class User extends AbstractClient
 {
 
     protected $password;
+    protected $id;
 
     /**
      * Authenticate with the REST API.
@@ -27,7 +28,7 @@ class User extends \RocketChat\User
         if ($save_auth) {
             // save auth token for future requests
             $tmp = Request::init()
-                ->addHeader('X-Auth-Token', '')
+                ->addHeader('X-Auth-Token', getenv('ROCKET_CHAT_PERSONAL_TOKEN'))
                 ->addHeader('X-User-Id', $this->id);
             Request::ini($tmp);
         }

@@ -1,6 +1,6 @@
 <template id="login">
     <head>
-        <link src="/assets/styles.css"/>
+        <link src="/resources/assets/styles.css"/>
     </head>
     <body>
         <section class="login-modal" surface="login">

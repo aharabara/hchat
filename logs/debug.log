@@ -1,0 +1,53 @@
+localhost - 2019-06-07 07:39:05 - 3 - Unable to connect to "/users.list": 3 <url> malformed
+#0 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/hchat/vendor/nategood/httpful/src/Httpful/Request.php(204): Httpful\Request->buildResponse(false)
+#1 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/hchat/src/Api/AbstractClient.php(54): Httpful\Request->send()
+#2 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/hchat/src/UserController.php(51): App\Api\AbstractClient->list_users()
+#3 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Core/Traits/EventBusTrait.php(25): App\UserController->login(Object(Base\Components\OrderedList\ListItem))
+#4 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Components/OrderedList/OrderedList.php(101): Base\Core\BaseComponent->dispatch('item.selected', Array)
+#5 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Components/OrderedList/OrderedList.php(53): Base\Components\OrderedList\OrderedList->handleKeyPress(10)
+#6 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Application.php(315): Base\Components\OrderedList\OrderedList->draw(10)
+#7 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Application.php(171): Base\Application->drawComponent(1, Object(Base\Components\OrderedList\OrderedList), 10, false)
+#8 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/hchat/index.php(14): Base\Application->handle()
+#9 {main}
+localhost - 2019-06-07 07:39:30 - 3 - Unable to connect to "/users.list": 3 <url> malformed
+#0 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/hchat/vendor/nategood/httpful/src/Httpful/Request.php(204): Httpful\Request->buildResponse(false)
+#1 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/hchat/src/Api/AbstractClient.php(54): Httpful\Request->send()
+#2 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/hchat/src/UserController.php(51): App\Api\AbstractClient->list_users()
+#3 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Core/Traits/EventBusTrait.php(25): App\UserController->login(Object(Base\Components\OrderedList\ListItem))
+#4 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Components/OrderedList/OrderedList.php(101): Base\Core\BaseComponent->dispatch('item.selected', Array)
+#5 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Components/OrderedList/OrderedList.php(53): Base\Components\OrderedList\OrderedList->handleKeyPress(10)
+#6 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Application.php(315): Base\Components\OrderedList\OrderedList->draw(10)
+#7 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Application.php(171): Base\Application->drawComponent(1, Object(Base\Components\OrderedList\OrderedList), 10, false)
+#8 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/hchat/index.php(14): Base\Application->handle()
+#9 {main}
+localhost - 2019-06-07 07:50:36 - 3 - Call to undefined function App\Api\env()
+#0 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/hchat/src/UserController.php(49): App\Api\AbstractClient->__construct('', '')
+#1 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Core/Traits/EventBusTrait.php(25): App\UserController->login(Object(Base\Components\OrderedList\ListItem))
+#2 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Components/OrderedList/OrderedList.php(101): Base\Core\BaseComponent->dispatch('item.selected', Array)
+#3 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Components/OrderedList/OrderedList.php(53): Base\Components\OrderedList\OrderedList->handleKeyPress(10)
+#4 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Application.php(317): Base\Components\OrderedList\OrderedList->draw(10)
+#5 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Application.php(173): Base\Application->drawComponent(1, Object(Base\Components\OrderedList\OrderedList), 10, false)
+#6 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/hchat/index.php(14): Base\Application->handle()
+#7 {main}
+localhost - 2019-06-16 11:37:28 - 3 - Unable to connect to "/users.list": 3 <url> malformed
+#0 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/hchat/vendor/nategood/httpful/src/Httpful/Request.php(204): Httpful\Request->buildResponse(false)
+#1 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/hchat/src/Api/AbstractClient.php(52): Httpful\Request->send()
+#2 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/hchat/src/UserController.php(51): App\Api\AbstractClient->list_users()
+#3 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Core/Traits/EventBusTrait.php(25): App\UserController->login()
+#4 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Components/Button.php(47): Base\Core\BaseComponent->dispatch('press', Array)
+#5 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Application.php(359): Base\Components\Button->draw(10)
+#6 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Application.php(197): Base\Application->drawComponent(5, Object(Base\Components\Button), 10, false)
+#7 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Application.php(102): Base\Application->handle()
+#8 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/hchat/index.php(8): Base\Application::boot(true)
+#9 {main}
+localhost - 2019-06-16 11:41:32 - 3 - Unable to connect to "/users.list": 3 <url> malformed
+#0 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/hchat/vendor/nategood/httpful/src/Httpful/Request.php(204): Httpful\Request->buildResponse(false)
+#1 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/hchat/src/Api/AbstractClient.php(52): Httpful\Request->send()
+#2 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/hchat/src/UserController.php(51): App\Api\AbstractClient->list_users()
+#3 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Core/Traits/EventBusTrait.php(25): App\UserController->login()
+#4 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Components/Button.php(47): Base\Core\BaseComponent->dispatch('press', Array)
+#5 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Application.php(359): Base\Components\Button->draw(10)
+#6 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Application.php(197): Base\Application->drawComponent(6, Object(Base\Components\Button), 10, false)
+#7 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/habarnam/src/Base/Application.php(102): Base\Application->handle()
+#8 /mnt/c/Users/alexandr.harabara/Documents/Projects/OpenSource/hchat/index.php(8): Base\Application::boot(true)
+#9 {main}

@@ -1,6 +1,6 @@
 <template id="main">
     <head>
-        <link src="/assets/styles.css"/>
+        <link src="/resources/assets/styles.css"/>
     </head>
     <body>
         <section title="Users" surface="column.left">
